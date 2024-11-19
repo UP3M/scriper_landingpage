@@ -11,7 +11,7 @@ import { BackgroundCircles, BottomLine, Gradient } from "../../design/hero";
 // import Generating from "../../atoms/generating";
 // import Notification from "./notification";
 import CompanyLogos from "./company-logos";
-import VideoPlayer from "./result-vid"
+// import VideoPlayer from "./result-vid"
 import { images } from "@/constants";
 
 type Props = {};
@@ -56,7 +56,29 @@ const Hero = (props: Props) => {
               <div className={cn("h-[1.4rem] bg-n-10 rounded-t-[0.9rem]")} />
               
                 <div className={cn("relative h-30 flex justify-center items-start")}> {/* Removed padding from here */}
-                  <VideoPlayer /> {/* Added object-cover to fit */}
+                
+                <div
+                  style={{
+                    position: 'relative',
+                    width: '100%',
+                    paddingBottom: '56.25%', // Maintain 16:9 aspect ratio
+                    height: 0,
+                    overflow: 'hidden',
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/Ichjx_9osKY?autoplay=1&mute=1"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                    } as React.CSSProperties} // Type-safe style object
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
                 </div>
 
                 {/* <Generating className="absolute inset-x-4 bottom-5 md:bottom-8 md:left-1/2 md:right-auto md:w-[31rem] md:-translate-x-1/2" />

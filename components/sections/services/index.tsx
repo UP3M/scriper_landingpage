@@ -6,11 +6,10 @@ import Heading from "../../atoms/heading";
 import { brainwaveServices, brainwaveServicesIcons, images } from "@/constants";
 import Image from "next/image";
 import Generating from "../../atoms/generating";
-import VideoPlayer from "./result_vid"
 import {
   // PhotoChatMessage,
   // VideoBar,
-  VideoChatMessage,
+  // VideoChatMessage,
   Gradient,
 } from "@/components/design/services";
 import { cn } from "@/lib/utils";
@@ -112,9 +111,31 @@ const Services = (props: Props) => {
               </div>
 
               <div className="relative h-30 overflow-hidden rounded-xl bg-n-8 md:h-[25rem]">
-                <VideoPlayer/>
-
-                <VideoChatMessage />
+                {/* <VideoPlayer/> */}
+                
+                <div
+                  style={{
+                    position: 'relative',
+                    width: '100%',
+                    paddingBottom: '56.25%', // Maintain 16:9 aspect ratio
+                    height: 0,
+                    overflow: 'hidden',
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/WlQ1pKIB14k?autoplay=1&mute=1"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                    } as React.CSSProperties} // Type-safe style object
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                {/* <VideoChatMessage /> */}
 
               </div>
             </div>
