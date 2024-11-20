@@ -67,7 +67,7 @@ const Hero = (props: Props) => {
                   }}
                 >
                   <iframe
-                    src="https://www.youtube.com/embed/Ichjx_9osKY?autoplay=1&mute=1"
+                    src="https://www.youtube.com/embed/WlQ1pKIB14k?autoplay=1&mute=1"
                     style={{
                       position: 'absolute',
                       top: 0,
