@@ -1,12 +1,9 @@
-﻿"use client";
-
-import React, { useRef } from "react";
-import Section from "../../layout/section";
-import Button from "../../atoms/button";
-import { BackgroundCircles, BottomLine, Gradient } from "../../design/hero";
-import CompanyLogos from "./company-logos";
-import { images } from "@/constants";
-
+import React, { useRef } from 'react';
+import Section from '../../layout/section';
+import Button from '../../atoms/button';
+import { BackgroundCircles, BottomLine, Gradient } from '../../design/hero';
+import CompanyLogos from './company-logos';
+import { images } from '@/constants';
 
 type Props = {};
 
@@ -75,4 +72,3 @@ const Hero = (props: Props) => {
 };
 
 export default Hero;
-
