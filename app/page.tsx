@@ -10,6 +10,26 @@ import ButtonGradient from "@/components/svg/button-gradient";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
+  const videoSchema = {
+    "@context": "https://schema.org", 
+    "@type": "VideoObject", 
+    "name": "Scriper Introduction", 
+    "description": "This video showcases the key features and capabilities of Scriper.", 
+    "thumbnailUrl": "/thumbnail.png", 
+    "uploadDate": "2023-02-22", 
+    "duration": "PT1M28S", 
+    "contentUrl": "https://www.youtube.com/embed/WlQ1pKIB14k"
+  };
+
+  const schemaScript = (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(videoSchema),
+      }}
+    />
+  );
+
   return (
     <main>
       <div className={cn("overflow-hidden pt-[4.75rem] lg:pt-[5.25rem]")}>
@@ -22,6 +42,7 @@ export default function Home() {
         {/* <Roadmap /> */}
         <Footer />
       </div>
+      {schemaScript}
       <ButtonGradient />
     </main>
   );

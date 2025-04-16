@@ -18,7 +18,7 @@ const Collaboration = (props: Props) => {
             {collabContent.map((item) => (
               <li key={item.id} className="mb-3 py-3">
                 <div className="flex items-center">
-                  <Image src={images.check} width={24} height={24} alt="check" />
+                  <Image src={images.check} width={24} height={24} alt="Green check symbol indicating a feature" />
                   <h6 className="body-2 ml-5">{item.title}</h6>
                 </div>
                 {item.text && <p className="body-2 mt-3 text-n-4">{item.text}</p>}
@@ -36,8 +36,8 @@ const Collaboration = (props: Props) => {
           <div className="relative left-1/2 flex aspect-square w-[22rem] -translate-x-1/2 scale-75 rounded-full border border-n-6 md:scale-100">
             <div className="m-auto flex aspect-square w-60 rounded-full border border-n-6">
               <div className="m-auto aspect-square w-24 rounded-full bg-conic-gradient p-[0.2rem]">
-                <div className="flex h-full items-center justify-center rounded-full bg-n-8">
-                  <Image src={images.brainwaveSymbol} width={48} height={48} alt="brainwave" />
+                <div className="flex h-full items-center justify-center rounded-full bg-n-8">    
+                  <Image src={images.brainwaveSymbol} width={48} height={48} alt="Illustration of a brainwave symbol, representing AI technology." />
                 </div>
               </div>
             </div>

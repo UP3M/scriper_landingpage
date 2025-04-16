@@ -56,7 +56,7 @@ const PricingList: React.FC = () => {
           <div
             key={item.id}
             className="h-full w-[19rem] rounded-[2rem] border border-n-6 bg-n-8 px-6 odd:my-4 odd:py-8 even:py-14 max-lg:w-full lg:w-auto [&>h4]:first:text-color-2 [&>h4]:last:text-color-3 [&>h4]:even:text-color-1"
-          >
+            >
             <h4 className="h4 mb-4">{item.title}</h4>
             <p className="body-2 mb-3 min-h-16 text-n-1/50">{item.description}</p>
 
@@ -65,7 +65,7 @@ const PricingList: React.FC = () => {
                 <>
                   <span className="h3">$</span>
                   <span className="text-[5.5rem] font-bold leading-none">{item.price}</span>
-                </>
+              </>
               )}
             </div>
 
@@ -82,7 +82,7 @@ const PricingList: React.FC = () => {
             >
               {item.price ? "Pre-Register Now" : "Contact us"}
             </Button>
-
+            
 
             <ul>
               {item.features.map((feature, index) => (
@@ -93,7 +93,7 @@ const PricingList: React.FC = () => {
               ))}
             </ul>
           </div>
-        ))}
+          ))}
       </div>
 
       {/* Registration Form Modal */}
@@ -108,7 +108,7 @@ const PricingList: React.FC = () => {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Enter your name"  // Added placeholder
+                  placeholder="Enter your name"
                   className="border w-full p-2 text-gray-900 bg-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={formData.name}
                   onChange={handleInputChange}
@@ -121,7 +121,7 @@ const PricingList: React.FC = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Enter your email"  // Added placeholder
+                  placeholder="Enter your email"
                   className="border w-full p-2 text-gray-900 bg-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={formData.email}
                   onChange={handleInputChange}
@@ -133,7 +133,7 @@ const PricingList: React.FC = () => {
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Enter your message"  // Added placeholder
+                  placeholder="Enter your message"
                   className="border w-full p-2 text-gray-900 bg-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={formData.message}
                   onChange={handleInputChange}

@@ -32,7 +32,7 @@ const Services = (props: Props) => {
             <div className="pointer-events-none absolute left-0 top-0 h-full md:w-3/5 xl:w-auto">
               <Image
                 src={images.service1}
-                alt="smartest ai"
+                alt="Illustration of the Scriper AI, representing a Smart AI."
                 width={800}
                 height={730}
                 className="size-full object-cover md:object-right"
@@ -47,7 +47,7 @@ const Services = (props: Props) => {
               <ul className="body-2">
                 {brainwaveServices.map((service, index) => (
                   <li key={index} className="flex items-start border-t border-n-6 py-4">
-                    <Image src={images.check} alt="check" width={24} height={24} />
+                    <Image src={images.check} alt="Green check symbol indicating a service feature" width={24} height={24} />
                     <p className="ml-4">{service}</p>
                   </li>
                 ))}
@@ -59,7 +59,7 @@ const Services = (props: Props) => {
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <div className="relative min-h-[30rem] overflow-hidden rounded-3xl border border-n-1/10">
             <div className="px-4 py-12 xl:px-8">
-                <h4 className="h4 mb-4">Photo editing</h4>
+                <h4 className="h4 mb-4">Photo Editing</h4>
                 <p className="body-2 mb-8 text-n-3">
                 Automatically enhance your photos using our AI app&apos;s photo editing feature.
                 Try it now!
@@ -70,16 +70,14 @@ const Services = (props: Props) => {
                   src={"/assets/image_enh.jpg"}
                   width={660}
                   height={550}
-                  alt="robot"
+                  alt="Photo editing using AI"
                 />
               </div>
-
-              
             </div>
 
             <div className="overflow-hidden rounded-3xl bg-n-7 p-4 lg:min-h-[40rem]">
               <div className="px-4 py-12 xl:px-8">
-                <h4 className="h4 mb-4">Video generation</h4>
+                <h4 className="h4 mb-4">Video Generation</h4>
                 <p className="body-2 mb-8 text-n-3">
                   The world’s most powerful AI photo and video art generation engine. What will you
                   create?
@@ -103,40 +101,15 @@ const Services = (props: Props) => {
                             "flex size-full items-center justify-center rounded-2xl bg-n-7"
                         )}
                       >
-                        <Image src={item} alt="icon" width={24} height={24} />
+                        <Image src={item} alt="Brainwave service icon" width={24} height={24} />
                       </div>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="relative h-30 overflow-hidden rounded-xl bg-n-8 md:h-[25rem]">
-                {/* <VideoPlayer/> */}
-                
-                <div
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    paddingBottom: '56.25%', // Maintain 16:9 aspect ratio
-                    height: 0,
-                    overflow: 'hidden',
-                  }}
-                >
-                  <iframe
-                    src="https://www.youtube.com/embed/Ichjx_9osKY?autoplay=1&mute=1"
-                    style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '100%',
-                    } as React.CSSProperties} // Type-safe style object
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                {/* <VideoChatMessage /> */}
-
+              <div className="relative h-[10rem] overflow-hidden rounded-xl bg-n-8 md:h-[25rem]">
+                <iframe width="660" height="372" src="https://www.youtube.com/embed/WlQ1pKIB14k?si=aTbr3qT-uixdQdFl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading='lazy'></iframe>
               </div>
             </div>
             <Gradient />
