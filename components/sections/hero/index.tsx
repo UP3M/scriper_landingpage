@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useRef } from 'react';
 import Section from '../../layout/section';
+import Image from 'next/image';
 import Button from '../../atoms/button';
 import { BackgroundCircles, BottomLine, Gradient } from '../../design/hero';
 import CompanyLogos from './company-logos';
@@ -23,13 +26,14 @@ const Hero = (props: Props) => {
             Explore the Possibilities of&nbsp;Generative AI&nbsp; with
             <span className="relative inline-block">
               Scriper
-              <img
+              <Image
+                fill
+                className="absolute left-0 w-full top-full xl:-mt-2"
                 src={images.curve}
                 alt="Decorative curve under the name Scriper"
-                className="absolute left-0 top-full w-full xl:-mt-2"
-                width={624}
-                height={28}                
-              />
+
+                priority
+              />             
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
@@ -42,29 +46,28 @@ const Hero = (props: Props) => {
         </div>
 
         <div className="mx-auto relative max-w-[23rem] md:max-w-5xl xl:mb-24">
-          <div className="relative z-1 rounded-2xl p-0.5 bg-conic-gradient">
+          <div className="relative z-1 rounded-2xl bg-conic-gradient p-0.5">
             <div className="relative rounded-2xl bg-n-8">
-              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
+              <div className="rounded-t-[0.9rem] h-[1.4rem] bg-n-10" />
               <div className="relative flex w-full items-start justify-center">
-              <iframe width="660" height="372" src="https://www.youtube.com/embed/WlQ1pKIB14k?si=aTbr3qT-uixdQdFl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading='lazy'></iframe>
+                <iframe className="" width="660" height="372" src="https://www.youtube.com/embed/WlQ1pKIB14k?si=aTbr3qT-uixdQdFl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading='lazy'></iframe>
               </div>
               
               <div><Gradient /></div>
             </div>
           </div>
-          <div className="absolute left-1/2 top-[-54%] w-[234%] -translate-x-1/2 md:top-[-46%] md:w-[138%] lg:top-[-104%]">
-            <img
-              src={images.heroBackground}
+          <div className="absolute left-1/2 w-[234%] -translate-x-1/2 top-[-54%] md:w-[138%] md:top-[-46%] lg:top-[-104%]">
+            <Image
+              fill
               className="w-full"
-              width={1440}
-              height={1880}
+              src={images.heroBackground}
               alt="Background of the hero section with geometric figures"
+              priority
             />
-                </div>
+          </div>
           <BackgroundCircles parallaxRef={parallaxRef} />
         </div>
-
-        <CompanyLogos className="relative z-10 mt-20 hidden lg:block" />
+        <CompanyLogos className="relative hidden mt-20 z-10 lg:block" />
       </div>
       <BottomLine />
     </Section>

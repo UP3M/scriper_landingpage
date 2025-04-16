@@ -31,7 +31,7 @@ const PricingList: React.FC = () => {
         body: new FormData(form),  // Use FormData from the form directly
       });
   
-      if (response.ok) {
+    if (response.ok) {
         alert("Thank you! Your form is submitted successfully.");
         setFormData({ name: "", email: "", message: "" });  // Clear form
         setShowForm(false);  // Close the form
@@ -47,7 +47,7 @@ const PricingList: React.FC = () => {
       setIsSubmitting(false);
     }
   };
-  
+
   
   return (
     <>
@@ -55,8 +55,8 @@ const PricingList: React.FC = () => {
         {pricing.map((item) => (
           <div
             key={item.id}
-            className="h-full w-[19rem] rounded-[2rem] border border-n-6 bg-n-8 px-6 odd:my-4 odd:py-8 even:py-14 max-lg:w-full lg:w-auto [&>h4]:first:text-color-2 [&>h4]:last:text-color-3 [&>h4]:even:text-color-1"
-            >
+            className="relative h-full w-[19rem] rounded-[2rem] border border-n-6 bg-n-8 px-6 odd:my-4 odd:py-8 even:py-14 max-lg:w-full lg:w-auto [&>h4]:first:text-color-2 [&>h4]:last:text-color-3 [&>h4]:even:text-color-1"
+          >
             <h4 className="h4 mb-4">{item.title}</h4>
             <p className="body-2 mb-3 min-h-16 text-n-1/50">{item.description}</p>
 
@@ -89,7 +89,7 @@ const PricingList: React.FC = () => {
                 <li key={index} className="flex items-start border-t border-n-6 py-5">
                   <Image src={images.check} width={24} height={24} alt="check" />
                   <p className="body-2 ml-4">{feature}</p>
-                </li>
+                  </li>
               ))}
             </ul>
           </div>
@@ -98,18 +98,18 @@ const PricingList: React.FC = () => {
 
       {/* Registration Form Modal */}
       {showForm && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-500/50">
           <div className="bg-white p-6 rounded-lg w-[400px]">
-            <h2 className="text-xl text-gray-900 font-bold mb-4">Register</h2>
+            <h2 className="mb-4 font-bold text-gray-900 text-xl">Register</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="name" className="block font-medium text-gray-700">Name</label>
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="name"                 
                   placeholder="Enter your name"
-                  className="border w-full p-2 text-gray-900 bg-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded border bg-white p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
@@ -122,7 +122,7 @@ const PricingList: React.FC = () => {
                   id="email"
                   name="email"
                   placeholder="Enter your email"
-                  className="border w-full p-2 text-gray-900 bg-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded border bg-white p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -134,7 +134,7 @@ const PricingList: React.FC = () => {
                   id="message"
                   name="message"
                   placeholder="Enter your message"
-                  className="border w-full p-2 text-gray-900 bg-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded border bg-white p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={formData.message}
                   onChange={handleInputChange}
                   required
@@ -143,15 +143,15 @@ const PricingList: React.FC = () => {
               <div className="flex justify-between">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                  className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
                 <button
-                  type="button"
-                  className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
-                  onClick={() => setShowForm(false)}
+                 type="button"
+                  className="rounded bg-gray-500 px-4 py-2 text-white hover:bg-gray-600"
+                    onClick={() => setShowForm(false)}
                 >
                   Close
                 </button>

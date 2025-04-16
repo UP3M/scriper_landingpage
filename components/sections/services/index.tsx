@@ -25,13 +25,13 @@ const Services = (props: Props) => {
         <Heading
           title="Generative AI made for creators."
           text="Scriper unlocks the potential of AI-powered applications"
-        />
+          />
 
         <div className="relative">
-          <div className="relative z-1 mb-5 flex h-[39rem] items-center overflow-hidden rounded-3xl border border-n-1/10 p-8 lg:p-20 xl:h-[46rem]">
+          <div className="relative z-1 flex h-[39rem] items-center overflow-hidden rounded-3xl border border-n-1/10 mb-5 p-8 lg:p-20 xl:h-[46rem]">
             <div className="pointer-events-none absolute left-0 top-0 h-full md:w-3/5 xl:w-auto">
               <Image
-                src={images.service1}
+                src={images.service1}                
                 alt="Illustration of the Scriper AI, representing a Smart AI."
                 width={800}
                 height={730}
@@ -47,11 +47,12 @@ const Services = (props: Props) => {
               <ul className="body-2">
                 {brainwaveServices.map((service, index) => (
                   <li key={index} className="flex items-start border-t border-n-6 py-4">
-                    <Image src={images.check} alt="Green check symbol indicating a service feature" width={24} height={24} />
+                    <Image src={images.check} alt="Green check symbol indicating a service feature" width={24} height={24} />                    
                     <p className="ml-4">{service}</p>
                   </li>
                 ))}
               </ul>
+              
             </div>
             <Generating className="absolute inset-x-4 bottom-4 border border-n-1/10 lg:bottom-8 lg:left-1/2 lg:right-auto lg:-translate-x-1/2" />
           </div>
@@ -62,10 +63,10 @@ const Services = (props: Props) => {
                 <h4 className="h4 mb-4">Photo Editing</h4>
                 <p className="body-2 mb-8 text-n-3">
                 Automatically enhance your photos using our AI app&apos;s photo editing feature.
-                Try it now!
+                  Try it now!
                 </p>
               </div>
-              <div className="relative h-50 overflow-hidden rounded-xl bg-n-8 md:h-[25rem]">
+              <div className="relative h-40 overflow-hidden rounded-xl bg-n-8 md:h-[25rem]">
                 <Image
                   src={"/assets/image_enh.jpg"}
                   width={660}
@@ -88,14 +89,13 @@ const Services = (props: Props) => {
                     <li
                       key={index}
                       onClick={() => setSelectedItem(index)}
-                      className={cn(
-                        "flex items-center justify-center rounded-2xl cursor-pointer",
-                        index === selectedItem
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "w-10 h-10 bg-n-6 md:w-15 md:h-15"
-                      )}
-                    >
+                      className={cn("flex h-10 w-10 cursor-pointer items-center justify-center rounded-2xl bg-n-6 md:h-15 md:w-15",
+                         index === selectedItem && "h-[3rem] w-[3rem] bg-conic-gradient p-0.25 md:h-[4.5rem] md:w-[4.5rem]"                      
+                        
+                        )}
+                      >
                       <div
+                        
                         className={cn(
                           index === selectedItem &&
                             "flex size-full items-center justify-center rounded-2xl bg-n-7"
@@ -108,7 +108,7 @@ const Services = (props: Props) => {
                 </ul>
               </div>
 
-              <div className="relative h-[10rem] overflow-hidden rounded-xl bg-n-8 md:h-[25rem]">
+              <div className="relative h-40 overflow-hidden rounded-xl bg-n-8 md:h-[25rem]">
                 <iframe width="660" height="372" src="https://www.youtube.com/embed/WlQ1pKIB14k?si=aTbr3qT-uixdQdFl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading='lazy'></iframe>
               </div>
             </div>

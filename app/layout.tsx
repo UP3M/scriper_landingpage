@@ -6,6 +6,9 @@ import "./globals.css";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
+
+
   title: "Scriper: AI-Powered Content Generation for Effortless Creation",
   description:
     "Unlock your content creation potential with Scriper, the AI-powered tool that generates high-quality content effortlessly. Start creating today!",
